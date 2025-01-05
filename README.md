@@ -2,6 +2,12 @@
 
 A dynamic and interactive Weather Dashboard built using React.js. This application provides real-time weather updates and forecasts for cities worldwide, leveraging modern design and API integration.
 
+Name: Dhevadharshini
+Company: Codtech IT Solutions
+ID: CT12IUH
+Domain: React.js Web Development
+Duration: December 30th 2024 to March 01th of 2025
+
 ## Features
 
 - **Real-Time Weather Data**: Displays temperature, humidity, wind speed, and weather conditions.
@@ -13,9 +19,9 @@ A dynamic and interactive Weather Dashboard built using React.js. This applicati
 ## Tech Stack
 
 - **React.js**: Frontend framework for building the UI.
-- **OpenWeatherMap API**: For fetching weather data.
+- **Weather API**: For fetching weather data.
 - **Axios**: For API requests.
-- **CSS/SCSS**: Styling the application.
+- **CSS/TailwindCSS**: Styling the application.
 - **React Hooks**: Managing state and side effects.
 
 ## Installation
@@ -32,7 +38,7 @@ A dynamic and interactive Weather Dashboard built using React.js. This applicati
    ```
 
 3. Configure your API key:
-   - Sign up on [OpenWeatherMap](https://openweathermap.org/api) and get an API key.
+   - Sign up on [WeatherAPI]([https://www.weatherapi.com/]) and get an API key.
    - Create a `.env` file in the root directory:
      ```env
      REACT_APP_WEATHER_API_KEY=your_api_key_here
@@ -45,7 +51,7 @@ A dynamic and interactive Weather Dashboard built using React.js. This applicati
 
 ## Usage
 
-1. Open the application in your browser at `http://localhost:3000`.
+1. Open the application in your browser at `http://localhost:5173`.
 2. Enter a city name in the search bar and press Enter.
 3. View the current weather and, if implemented, the forecast.
 
@@ -53,22 +59,26 @@ A dynamic and interactive Weather Dashboard built using React.js. This applicati
 
 ```
 weather-dashboard/
-├── public/
+├── .bolt/
+│   └── config.json
 ├── src/
 │   ├── components/
-│   │   ├── Header.js
-│   │   ├── SearchBar.js
-│   │   ├── WeatherCard.js
-│   │   ├── Forecast.js
-│   ├── styles/
-│   │   ├── App.css
-│   │   ├── WeatherCard.css
-│   ├── App.js
-│   ├── index.js
+│   │   ├── CurrentWeather.tsx
+│   │   ├── Forecast.tsx
+│   │   ├── SearchBar.tsx
+│   │   └── WeatherBackground.tsx
+│   ├── constants/
+│   │   └── weatherBackgrounds.ts
+│   ├── services/
+│   │   └── weatherApi.ts
+│   ├── types/
+│   │   └── weather.ts
 │   ├── utils/
-│   │   ├── api.js
-├── .env
-├── package.json
+│   │   └── weatherUtils.ts
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   └── vite-env.d.ts
 ```
 
 ## Dependencies
@@ -106,7 +116,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- [OpenWeatherMap API](https://openweathermap.org/api)
+- [Weather API](https://weatherapi.org/api)
 - React.js Documentation
 
 ---
